@@ -26,6 +26,9 @@ jobs:
     - name: Go to working dirctroy
       run: cd HelloWorldApp
 
+    - name: Where I am
+      run: pwd;ls;
+
     - name: restore package
       run: dotnet restore
       
