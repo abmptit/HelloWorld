@@ -24,10 +24,10 @@ jobs:
         dotnet-version: 6.0.x
 
     - name: Go to working dirctroy
-      run: cd HelloWorldApp
+      run: cd HelloWorld/HelloWorldApp
 
     - name: Where I am
-      run: pwd;ls;
+      run: ls;
 
     - name: restore package
       run: dotnet restore
