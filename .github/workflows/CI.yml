@@ -22,9 +22,12 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+        
+    - name: Where I am
+      run: ls;
 
     - name: Go to working dirctroy
-      run: cd HelloWorld/HelloWorldApp
+      run: cd ./HelloWorldApp
 
     - name: Where I am
       run: ls;
