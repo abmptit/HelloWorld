@@ -10,14 +10,7 @@ jobs:
 
   build:
 
-    strategy:
-      matrix:
-        configuration: [Debug, Release]
-
     runs-on: ubuntu-latest
-
-    env:
-      Solution_Name: HelloWorldApp
 
     steps:
     - name: Checkout
@@ -25,11 +18,13 @@ jobs:
       with:
         fetch-depth: 0
 
-    # Install the .NET Core workload
     - name: Install .NET Core
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+
+    - name: Go to working dirctroy
+      run: cd HelloWorldApp
 
     - name: restore package
       run: dotnet restore
